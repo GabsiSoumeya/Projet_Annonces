@@ -1,0 +1,12 @@
+<div class="contenu"> 
+    <label>Nom de l'annonce</label> <input #nom ><br> 
+    <label>Description du l'annonce</label> <input #desc><br> 
+    <label>Categorie du l'annonce</label>
+     <select #categorie >
+        <option> Please select Category</option>
+        <option  *ngFor="let categorie of categories; let index=index" value="{{categorie.id}}"  >{{categorie.categorieAnnonceName}}</option>
+    </select>
+    <br> 
+    
+    <button (click)="ajouterAnnonce(nom.value,desc.value,categorie.value)">Ajouter</button> 
+ </div>

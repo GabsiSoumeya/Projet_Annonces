@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class ="card-body">
+   
+   
+     <table class="table table-striped">
+     <tr> <th>ID</th>
+          <th>Nom</th>
+          <th>Description</th>
+          <th>Categorie</th>
+     </tr>
+     <tbody *ngFor="let annonce of tabAnnonces; let index=index">
+       <td>{{ annonce.id }}</td>
+       <td>{{ annonce.nom }}</td>
+       <td>{{ annonce.description }}</td>
+       <td>{{ annonce.categorieId }}</td>
+       <td> <a class="btn btn-danger" (click)="supprimer(index)" >Supprimer</a></td>
+       
+
+       <td> <a class="btn btn-info" [routerLink]="['/admin/details',annonce.id]" >Details</a></td>
+     </tbody>
+   
+   
+   
+   
+     </table>
+    </div>
+   </div>
+   </div>
+   
